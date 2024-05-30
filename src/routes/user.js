@@ -6,7 +6,14 @@ const userSchema = require("../models/user");
 
 // create users
 router.post("/users", (req, res) => {
-    res.send("Creating users");
+    const userCreated = userSchema(req.body);
+    userCreated
+        .save()
+        .then((data) => {
+            res.json(data);
+            console.log("User has been created");
+        })
+        .catch(err => console.log(err));
 });
 
 module.exports = router;

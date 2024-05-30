@@ -7,6 +7,7 @@ require("dotenv").config();
 const app = express();
 
 // middlewares
+app.use(express.json());
 app.use('/api', userRoutes); // Todas las rutas tendran esto delante
 
 
