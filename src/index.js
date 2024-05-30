@@ -1,10 +1,16 @@
 const express = require('express');
 const mongoose = require("mongoose");
+const userRoutes = require("./routes/user");
 
 require("dotenv").config();
 
 const app = express();
 
+// middlewares
+app.use('/api', userRoutes); // Todas las rutas tendran esto delante
+
+
+// routes
 app.get('/', (req, res) => {
     res.send("Welcome to my API");
 })
