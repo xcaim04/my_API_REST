@@ -3,7 +3,26 @@ POST http://localhost:9000/api/users HTTP/1.1
 Content-Type: application/json
 
 {
-    "name": "Javier Andres",
-    "age": "10",
-    "email": "javito@gmail.com"
+    "name": "Melany Rodriguez Gato",
+    "age": "17",
+    "email": "putonadepapi@gmail.com"
 }
+
+###
+GET http://localhost:9000/api/users HTTP/1.1
+
+###
+GET http://localhost:9000/api/users/6658c1144baa474effbb99b3 HTTP/1.1
+
+###
+PUT http://localhost:9000/api/users/6659a0656b560f8c7c5c3b85 HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Marioly Moreira",
+    "age": "50",
+    "email": "mom@gmail.com"
+}
+
+###
+DELETE http://localhost:9000/api/users/6658c1144baa474effbb99b3 HTTP/1.1
